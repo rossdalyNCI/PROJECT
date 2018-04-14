@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PhonesiteCA</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'layouts/header' %>
+    
+   
+    
+    <div class="center jumbotron">
+       <div id="container">
+            <h1>Welcome to the store</h1>
+            <div class="jackpots">SHADE</div>
+          </div>
+      </div>
+    
+    <div id="main_content" class="container">
+      
+      <div id="content" class="col-md-9 center-block">
+        <%= yield %>
+        
+      </div>
+    </div>
+    
+    
+    <div class="container button">
+       <button type="button" class="btn btn-primary" onmouseout="clearDate()" onmouseover="showDate()">Show Date</button>
+          <h3 id="time"></h3>
+    </div>
+  
+  <%= render 'layouts/footer' %>
+  </body>
+</html>
